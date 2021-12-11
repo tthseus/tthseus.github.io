@@ -46,5 +46,8 @@
   </url><url>
     <loc>https://tthseus.github.io/</loc>
     <lastmod>2019-03-13T17:28:09+02:00</lastmod>
+  </url><url>
+    <loc>https://tthseus.github.io/search/</loc>
+    <priority>0.1</priority>
   </url>
 </urlset>

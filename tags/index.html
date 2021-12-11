@@ -40,10 +40,11 @@
             <div class="navbar-menu">
 
                 <div class="navbar-end">
-                    <div class="control has-icons-left .is-vcentered is-centered">
-                        <input class="input search is-rounded" placeholder="Search">
+                    <form id="search" class="control has-icons-left" method="get" action="https://tthseus.github.io/search">
+                        <label hidden for="search-input">Search site</label>
+                        <input class="input is-small is-rounded" type="text" id="search-input" name="query" placeholder="Type here to search">
                         <span class="icon is-small is-left"><i class="fas fa-search"></i></span>
-                    </div>
+                    </form>
                     
                     <a href="https://tthseus.github.io/about" class="navbar-item">About</a>
                     
@@ -68,78 +69,6 @@
         </div>
         <div class="columns is-multiline">
             
-            <div class="column is-half">
-                
-<div class="card post-card">
-    <div class="card-image">
-        <figure class="image is-3by2 effect-card">
-            
-        </figure>    
-    </div>
-    <div class="card-content">
-        <a class="title is-4 font-sans font-bold text-2xl pt-1 pb-2" href="https://tthseus.github.io/tags/go/">Go</a>
-        <div class="content text-content">
-            
-            
-        </div>
-    </div>
-
-    <footer class="card-footer">
-        <p class="card-footer-item has-addons are-medium has-text-weight-semibold">
-            
-        </p>
-    </footer>
-</div>
-            </div>
-            
-            <div class="column is-half">
-                
-<div class="card post-card">
-    <div class="card-image">
-        <figure class="image is-3by2 effect-card">
-            
-        </figure>    
-    </div>
-    <div class="card-content">
-        <a class="title is-4 font-sans font-bold text-2xl pt-1 pb-2" href="https://tthseus.github.io/tags/lorem/">lorem</a>
-        <div class="content text-content">
-            
-            
-        </div>
-    </div>
-
-    <footer class="card-footer">
-        <p class="card-footer-item has-addons are-medium has-text-weight-semibold">
-            
-        </p>
-    </footer>
-</div>
-            </div>
-            
-            <div class="column is-half">
-                
-<div class="card post-card">
-    <div class="card-image">
-        <figure class="image is-3by2 effect-card">
-            
-        </figure>    
-    </div>
-    <div class="card-content">
-        <a class="title is-4 font-sans font-bold text-2xl pt-1 pb-2" href="https://tthseus.github.io/tags/security/">security</a>
-        <div class="content text-content">
-            
-            
-        </div>
-    </div>
-
-    <footer class="card-footer">
-        <p class="card-footer-item has-addons are-medium has-text-weight-semibold">
-            
-        </p>
-    </footer>
-</div>
-            </div>
-            
         </div> 
         <div class="columns is-centered">
             <div class="column is-narrow">
@@ -151,61 +80,64 @@
 </div>
 
         </main>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script src="https://tthseus.github.io/js/main.js" ></script>
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script  src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script  src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script>
+<script  src="https://tthseus.github.io/js/main.js" ></script>
 <script>
+     
     $(document).ready(function() {
-
-    
     $(".navbar-burger").click(function() {
-
-        
         $(".navbar-burger").toggleClass("is-active");
         $(".navbar-menu").toggleClass("is-active");
 
     });
-    
-    
+     
+
+     
     $(window).scroll(function(){
     var scrolled = $(window).scrollTop();
     if (scrolled > 200) $('.back-to-top').fadeIn('slow');
     if (scrolled < 200) $('.back-to-top').fadeOut('slow');
     });
 
-    
     $('.back-to-top').click(function () {
     $("html, body").animate({ scrollTop: "0" },  500);
     });
     });
-         
-         const themeToggle = document.querySelector("#toggle-dark");
+     
+        
+     
 
-const currentTheme = localStorage.getItem("theme");
-var pageTheme = document.body;
 
-let isDark = true
+    const themeToggle = document.querySelector("#toggle-dark");
 
-if (currentTheme == "dark") {
-pageTheme.classList.add("dark-theme");
-themeToggle.innerText="🌔";
-} else {
-    themeToggle.innerText = "🌘"
-}
+    const currentTheme = localStorage.getItem("theme");
+    var pageTheme = document.body;
 
-function themeMode() {
-    isDark = !isDark;
-    isDark ? themeToggle.innerText = "🌘" : themeToggle.innerText = "🌔";
-    pageTheme.classList.toggle("dark-theme");
+    let isDark = true
 
-    let theme = "light";
-    if (pageTheme.classList.contains("dark-theme")) {
-    theme = "dark";
+    if (currentTheme == "dark") {
+    pageTheme.classList.add("dark-theme");
+    themeToggle.innerText="🌔";
+    } else {
+        themeToggle.innerText = "🌘"
     }
-    localStorage.setItem("theme", theme);
-}
 
-themeToggle.addEventListener("click", themeMode)
+    function themeMode() {
+        isDark = !isDark;
+        isDark ? themeToggle.innerText = "🌘" : themeToggle.innerText = "🌔";
+        pageTheme.classList.toggle("dark-theme");
+
+        let theme = "light";
+        if (pageTheme.classList.contains("dark-theme")) {
+        theme = "dark";
+        }
+        localStorage.setItem("theme", theme);
+    }
+
+    themeToggle.addEventListener("click", themeMode);
+     
 
 </script><footer class="footer">
     <div class="container">

@@ -385,6 +385,9 @@ pre {
   --font-light: #202020;
   --font-highlight:#58a6ff;
   --font-bold-light: rgba(17,24,39,var(--tw-text-opacity));
+  --color-bg-h: 0%;
+  --color-bg-s: 0%;
+  --color-bg-l: 100%;
 }
 .dark-theme {
   --tw-text-opacity: 1;
@@ -396,6 +399,9 @@ pre {
   --font-light: #a2a8b4;
   --font-highlight:#58a6ff;
   --font-bold-light: rgba(229,231,235,var(--tw-text-opacity));
+  --color-bg-h: 231;
+  --color-bg-s: 14%;
+  --color-bg-l: 10%;
 }
 .typewrite {
   color:var(--font-bold-light);
@@ -5482,12 +5488,16 @@ button.dropdown-item.is-active {
 .navbar {
   background-color: var(--nav-color);
   backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(1em);
+  backdrop-filter: saturate(180%) blur(1em);
+  background: hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.8) linear-gradient(90deg, rgba(247,149,51,0.101961) 0, rgba(243,112,85,0.101961) 15%, rgba(239,78,123,0.101961) 30%, rgba(161,102,171,0.101961) 44%, rgba(80,115,184,0.101961) 58%, rgba(16,152,173,0.101961) 72%, rgba(7,179,155,0.101961) 86%, rgba(109,186,130,0.101961) 100%);
   height: 52px;
   width: 100%;
   min-height: 2.25rem;
   position: relative;
   z-index: 30;
 }
+
 .navbar.nav-rounded {
   display: -webkit-box;
   display: -webkit-flex;

@@ -19,8 +19,8 @@
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://tthseus.github.io/css/style.css">
-<link rel="stylesheet" href="https://tthseus.github.io/css/flickity.css">
-<link rel="stylesheet" href="https://tthseus.github.io/css/bulma.css">
+<link rel="stylesheet" href="https://tthseus.github.io/css/flickity.min.css">
+<link rel="stylesheet" href="https://tthseus.github.io/css/bulma.min.css">
     <body><header>
     <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">       
          <div class="container">
@@ -30,7 +30,6 @@
                         <span class="wrap"></span>
                       </a></h1></span>
                 </a>
-                
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -39,18 +38,15 @@
             </div>
             <div class="navbar-menu">
 
-                <div class="navbar-end">
-                    <form id="search" class="control has-icons-left" method="get" action="https://tthseus.github.io/search">
-                        <label hidden for="search-input">Search site</label>
-                        <input class="input is-small is-rounded" type="text" id="search-input" name="query" placeholder="Type here to search">
-                        <span class="icon is-small is-left"><i class="fas fa-search"></i></span>
-                    </form>
+                <div class="navbar-end">                
                     
                     <a href="https://tthseus.github.io/about" class="navbar-item">About</a>
                     
                     <a href="https://tthseus.github.io/post" class="navbar-item">Blog</a>
                     
                     <a href="https://tthseus.github.io/" class="navbar-item">Home</a>
+                    
+                    <a href="https://tthseus.github.io/search" class="navbar-item">Search</a>
                     
                     <div class="control dark-button has-icon-right dark-mode ml-1 mr-1">
                         <span class="icon is-small is-right" id="toggle-dark"></span>
@@ -68,6 +64,78 @@
                     
         </div>
         <div class="columns is-multiline">
+            
+            <div class="column is-half">
+                
+<div class="card post-card">
+    <div class="card-image">
+        <figure class="image is-3by2 effect-card">
+            
+        </figure>    
+    </div>
+    <div class="card-content">
+        <a class="title is-4 font-sans font-bold text-2xl pt-1 pb-2" href="https://tthseus.github.io/tags/go/">Go</a>
+        <div class="content text-content">
+            
+            
+        </div>
+    </div>
+
+    <footer class="card-footer">
+        <p class="card-footer-item has-addons are-medium has-text-weight-semibold">
+            
+        </p>
+    </footer>
+</div>
+            </div>
+            
+            <div class="column is-half">
+                
+<div class="card post-card">
+    <div class="card-image">
+        <figure class="image is-3by2 effect-card">
+            
+        </figure>    
+    </div>
+    <div class="card-content">
+        <a class="title is-4 font-sans font-bold text-2xl pt-1 pb-2" href="https://tthseus.github.io/tags/lorem/">lorem</a>
+        <div class="content text-content">
+            
+            
+        </div>
+    </div>
+
+    <footer class="card-footer">
+        <p class="card-footer-item has-addons are-medium has-text-weight-semibold">
+            
+        </p>
+    </footer>
+</div>
+            </div>
+            
+            <div class="column is-half">
+                
+<div class="card post-card">
+    <div class="card-image">
+        <figure class="image is-3by2 effect-card">
+            
+        </figure>    
+    </div>
+    <div class="card-content">
+        <a class="title is-4 font-sans font-bold text-2xl pt-1 pb-2" href="https://tthseus.github.io/tags/security/">security</a>
+        <div class="content text-content">
+            
+            
+        </div>
+    </div>
+
+    <footer class="card-footer">
+        <p class="card-footer-item has-addons are-medium has-text-weight-semibold">
+            
+        </p>
+    </footer>
+</div>
+            </div>
             
         </div> 
         <div class="columns is-centered">
@@ -138,20 +206,39 @@
 
     themeToggle.addEventListener("click", themeMode);
      
-
 </script><footer class="footer">
     <div class="container">
         <div class="columns has-text-centered">
-            
-            <div class="column is-narrow">
-                <a href="https://tthseus.github.io/about" class="font-bold">About</a>
-            </div>
-            
-            <div class="column is-narrow">
-                <a href="https://tthseus.github.io/privacy" class="font-bold">Privacy</a>
-            </div>
-            
+            <ul class="is-flex is-vcentered justify-content is-align-self-auto mx-auto">
+                <li>
+                    <a href="mailto:tthseus@gmail.com" aria-label="email" class="icon is-medium">
+                        <i data-feather="mail" class="fas fa-envelope"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/tthseus" target="_blank" rel="noopener" aria-label="GitHub" class="icon is-medium">
+                        <i data-feather="github" class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/tan-tinh-bui-953499180/" target="_blank" rel="noopener" aria-label="LinkedIn" class="icon is-medium">
+                        <i data-feather="linkedin" class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://tthseus.github.io/index.xml" aria-label="RSS" class="icon is-medium">
+                        <i data-feather="rss" class="fas fa-rss"></i>
+                    </a>
+                </li>
+            </ul>
+
         </div>
+        <p class="has-text-centered justify-content mx-auto font-sans">
+            <a href="https://tthseus.github.io">My Stuff</a>
+            &copy; Powered by the
+            <a href="https://github.com/tthseus/memoir-theme" target="_blank" rel="noopener">
+                Memoir Theme</a>
+            </p>
     </div>
     <div class="back-to-top icon is-medium">
         <i class="fas fa-arrow-circle-up fa-2x"></i>

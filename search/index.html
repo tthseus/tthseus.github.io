@@ -3,12 +3,12 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>lorem | My Stuff</title>
+    <title>Search Results | My Stuff</title>
     <meta name="description" content="">
     
-    <link rel="canonical" href="https://tthseus.github.io/tags/lorem/" />
+    <link rel="canonical" href="https://tthseus.github.io/search/" />
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="lorem"/>
+<meta name="twitter:title" content="Search Results"/>
 <meta name="twitter:description" content=""/>
 
     
@@ -57,158 +57,83 @@
     </nav>
 </header>
 <main>
-<div class="container">
-    <div class="section">
-        <div class="content">
-            <h1>lorem</h1>
-                    
-        </div>
-        <div class="columns is-multiline">
-            
-            <div class="column is-half">
-                
-<div class="card post-card">
-    <div class="card-image">
-        <figure class="image is-3by2 effect-card">
-            
-            
-            <a href="https://tthseus.github.io/post/lorem-ipsum8/"><img src="https://tthseus.github.io/post/lorem-ipsum8/pexels-cottonbro-3944454.jpg"></a>
-            
-        
-        </figure>    
-    </div>
-    <div class="card-content">
-        <a class="title is-4 font-sans font-bold text-2xl pt-1 pb-2" href="https://tthseus.github.io/post/lorem-ipsum8/">Lorem Ipsum 8</a>
-        <div class="content text-content">
-            Omnibus pantherarum felix iam tum Phoebe Bisque Phaethontis igitur Lorem markdownum cessit maerens novitasque sidera: fuit Phocis tinnitibus solis. Passi sedilia, perfringit dilataque Victor extimuit et regione adsere, illa eiusdem vastum limitibus! Senectae posito solet mugit ore ludit, vos iura, et sudore templum isto mea: siqua!
-            
-        
-            <div>
-                <a href="https://tthseus.github.io/post/lorem-ipsum8/">Read More…</a>
+    <div class="container">
+        <section class="section">
+            <div class="container max-800px py-auto">
+                <h1 class="title is-2 font-serif has-text-centered pt-1">
+                    Search Results
+                </h1>
+                <form id="search" class="control has-icons-left" role="search">
+                    <label hidden for="search-input">Search site</label>
+                    <input class="input is-medium is-rounded" type="text" id="search-input" name="query" placeholder="Type here to search">
+                    <span class="icon is-small is-left"><i class="fas fa-search"></i></span>
+                </form>
+                <section id="searchResult" class="search"></section>                    
             </div>
-            
-        </div>
+        </section>
     </div>
+<script>
+     
+    let searchInput = document.querySelector('#search-input'),
+        searchResult = document.querySelector('#searchResult');
 
-    <footer class="card-footer">
-        <p class="card-footer-item has-addons are-medium has-text-weight-semibold">
-            
-        <a href="https://tthseus.github.io/tags/lorem/" class="tag is-info is-rounded mr-1 ml-1 ">
-            #lorem
-        </a>
-            
-        <a href="https://tthseus.github.io/tags/security/" class="tag is-info is-rounded mr-1 ml-1 ">
-            #security
-        </a>
-            
-        <a href="https://tthseus.github.io/tags/go/" class="tag is-info is-rounded mr-1 ml-1 ">
-            #Go
-        </a>
-            
-        </p>
-    </footer>
-</div>
-            </div>
-            
-            <div class="column is-half">
-                
-<div class="card post-card">
-    <div class="card-image">
-        <figure class="image is-3by2 effect-card">
-            
-            
-            <a href="https://tthseus.github.io/post/lorem-ipsum7/"><img src="https://tthseus.github.io/post/lorem-ipsum7/featured.png"></a>
-            
-        
-        </figure>    
-    </div>
-    <div class="card-content">
-        <a class="title is-4 font-sans font-bold text-2xl pt-1 pb-2" href="https://tthseus.github.io/post/lorem-ipsum7/">Lorem Ipsum 7</a>
-        <div class="content text-content">
-            Omnibus pantherarum felix iam tum Phoebe Bisque Phaethontis igitur Lorem markdownum cessit maerens novitasque sidera: fuit Phocis tinnitibus solis. Passi sedilia, perfringit dilataque Victor extimuit et regione adsere, illa eiusdem vastum limitibus! Senectae posito solet mugit ore ludit, vos iura, et sudore templum isto mea: siqua!
-            
-        
-            <div>
-                <a href="https://tthseus.github.io/post/lorem-ipsum7/">Read More…</a>
-            </div>
-            
-        </div>
-    </div>
+    let dataJSON;
 
-    <footer class="card-footer">
-        <p class="card-footer-item has-addons are-medium has-text-weight-semibold">
-            
-        <a href="https://tthseus.github.io/tags/lorem/" class="tag is-info is-rounded mr-1 ml-1 ">
-            #lorem
-        </a>
-            
-        <a href="https://tthseus.github.io/tags/security/" class="tag is-info is-rounded mr-1 ml-1 ">
-            #security
-        </a>
-            
-        <a href="https://tthseus.github.io/tags/go/" class="tag is-info is-rounded mr-1 ml-1 ">
-            #Go
-        </a>
-            
-        </p>
-    </footer>
-</div>
-            </div>
-            
-            <div class="column is-half">
-                
-<div class="card post-card">
-    <div class="card-image">
-        <figure class="image is-3by2 effect-card">
-            
-            
-            <a href="https://tthseus.github.io/post/lorem-ipsum1/"><img src="https://tthseus.github.io/post/lorem-ipsum1/featured.jpg"></a>
-            
-        
-        </figure>    
-    </div>
-    <div class="card-content">
-        <a class="title is-4 font-sans font-bold text-2xl pt-1 pb-2" href="https://tthseus.github.io/post/lorem-ipsum1/">This Post is Full of Lorem Ipsum</a>
-        <div class="content text-content">
-            Omnibus pantherarum felix iam tum Phoebe Bisque Phaethontis igitur Lorem markdownum cessit maerens novitasque sidera: fuit Phocis tinnitibus solis. Passi sedilia, perfringit dilataque Victor extimuit et regione adsere, illa eiusdem vastum limitibus! Senectae posito solet mugit ore ludit, vos iura, et sudore templum isto mea: siqua!
-            
-        
-            <div>
-                <a href="https://tthseus.github.io/post/lorem-ipsum1/">Read More…</a>
-            </div>
-            
-        </div>
-    </div>
+    
+    window.addEventListener('keydown', function(event) {
+        if (event.key === '/') {
+            event.preventDefault()
+            searchInput.focus()
+        }
+    })
+    
+    window.addEventListener('keydown', function(event) {
+        if (event.keyCode === 27)
+        {
+            searchInput.value = '';
+            searchResult.innerHTML = '';
+            searchInput.blur()
+        }
+    })
+    
 
-    <footer class="card-footer">
-        <p class="card-footer-item has-addons are-medium has-text-weight-semibold">
-            
-        <a href="https://tthseus.github.io/tags/lorem/" class="tag is-info is-rounded mr-1 ml-1 ">
-            #lorem
-        </a>
-            
-        <a href="https://tthseus.github.io/tags/security/" class="tag is-info is-rounded mr-1 ml-1 ">
-            #security
-        </a>
-            
-        <a href="https://tthseus.github.io/tags/go/" class="tag is-info is-rounded mr-1 ml-1 ">
-            #Go
-        </a>
-            
-        </p>
-    </footer>
-</div>
-            </div>
-            
-        </div> 
-        <div class="columns is-centered">
-            <div class="column is-narrow">
-                
+    const getPostsJSON = async () => {
+        let response = await fetch('/index.json')
+        let data = await response.json()
+        return data
+    }
+    
 
-            </div>
-        </div> 
-    </div>
-</div>
+    const filterPostsJSON = (query, element) => {
+        let result, itemsWithElement;
+        query = new RegExp(query, 'ig')
+        result = dataJSON.filter(item => query.test(item.title))
+        itemsWithElement = result.map(item => (
+            `<li class="search-result-item">
+                <a href="${item.href}">
+                    ${item.title}
+                </a>
+            </li>`
+        ))
+        element.style.display = 'block';
+        itemsWithElement.unshift(`<p class="is-size-12 px-2 py-2 text-content">Press 'ESC' to cancel search.</p>`)
+        element.innerHTML = itemsWithElement.join('');
+    }
+    /**
+     * searchInputAction take two arguments, event and callback
+     */ 
+    const searchInputAction = (event, callback) => {
+        searchInput.addEventListener(event, callback)
+    }
+    /**
+     * When user focus on the search input, function getPostsJSON called.
+     */
+    searchInputAction('focus', () => getPostsJSON().then(data => dataJSON = data))
+    /**
+     * filtering result with the query that user given on search input.
+     */
+    searchInputAction('keyup', (event) => filterPostsJSON(event.target.value, searchResult))
+</script>
 
         </main>
 <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

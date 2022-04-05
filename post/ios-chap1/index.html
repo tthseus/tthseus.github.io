@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>iOS 101: Setting Up iOS Application Security Testing Environment - Part 01 | My Stuff</title>
+    <meta name="description" content="A journey to iOS Application Security">
+    
+    <link rel="canonical" href="https://tthseus.github.io/post/ios-chap1/" />
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tthseus.github.io/post/ios-chap1/featured.jpg"/>
+<meta name="twitter:title" content="iOS 101: Setting Up iOS Application Security Testing Environment - Part 01"/>
+<meta name="twitter:description" content="A journey to iOS Application Security"/>
+
+    
+    
+    
+</head>
+    
+
+
+
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://tthseus.github.io/css/style.min.a793836d4b8d26a09a357ca04b9c15b4.css">
+<link rel="stylesheet" href="https://tthseus.github.io/css/flickity.min.0e4bb0748b6c5c83825df9b0f95e9f3f.css">
+<link rel="stylesheet" href="https://tthseus.github.io/css/bulma.min.3ac25c914028acab7bb5846144c50e29.css">
+
+    <body><header>
+    <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">       
+         <div class="container">
+            <div class="navbar-brand">
+                <a href="https://tthseus.github.io/" title="home" class="navbar-item">
+                    <span class="logo"><h1><a  class="typewrite" data-period="2000" data-type='[ ">cd $HOME", "echo $USER", "Enchanté" ]'>
+                        <span class="wrap"></span>
+                      </a></h1></span>
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+
+                <div class="navbar-end">                
+                    
+                    <a href="https://tthseus.github.io/about" class="navbar-item">About</a>
+                    
+                    <a href="https://tthseus.github.io/post" class="navbar-item">Blog</a>
+                    
+                    <a href="https://tthseus.github.io/" class="navbar-item">Home</a>
+                    
+                    <a href="https://tthseus.github.io/search" class="navbar-item">Search</a>
+                    
+                    <div class="control dark-button has-icon-right dark-mode ml-1 mr-1">
+                        <span class="icon is-small is-right" id="toggle-dark"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+<section class="section">
+  <article>
+    <div class="container max-800px py-auto">
+        <h1 class="title is-1">iOS 101: Setting Up iOS Application Security Testing Environment - Part 01</h1>
+        <div class="title subtitle heading is-6">
+            <div class="columns is-vcentered">
+              <div class="column">
+                <div class="columns is-vcentered is-mobile">
+                  
+                  <div class="column">
+                    <p></p>
+                    <p><time>April 5, 2022</time> |
+                        6  minutes </p>
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                
+              </div>
+            </div>
+          </div>
+        <div class="content">
+          <p><img src="featured.jpg" alt=""></p>
+<p>Photo by <a href="https://unsplash.com/@vmxhu?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Szabo Viktor</a> on <a href="https://unsplash.com/s/photos/ios?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+<h3 id="motivation">Motivation</h3>
+<p>When researching and doing penetration testing of the mobile application, I came across both major platforms Android and iOS. While it&rsquo;s kinda easy to get started with Android, but it&rsquo;s not the same to do so on iOS due to some limitations from hardware and Apple&rsquo;s security features.</p>
+<p>This article will be the 1st chapter of a journey or a tale that will help you, and me to dive straight into iOS Security. It isn&rsquo;t a basic guideline, and it isn&rsquo;t a deep dive publication. Just a comprehensive note that collects snippets from many availble blogs and resources to understand some interesting stuff besides how we find the issues.</p>
+<h3 id="quickstart">Quickstart</h3>
+<h4 id="get-an-ios-device">Get an iOS device</h4>
+<p>Look back to the Android platform which has many options to choose the Android Virtual Device (AVD) or other emulators. While those emulators which fully emulate the hardware of an actual Android device, iOS can only offer Xcode&rsquo;s Simulator which mimics the software environment not the hardware. Most importantly, emulator binaries are compiled to x86 code instead of ARM code. Apps compiled for a real device don&rsquo;t run, making the simulator useless for black box analysis and reverse engineering.</p>
+<p>There is any iOS Emulator? Yes, <a href="https://www.corellium.com/">Corellium</a>. But it is an enterprise SaaS solution with a per user license model and does not offer any trial license. Hence, iOS app pentesting requires an actual iOS device and ensure the finding vulnerabilities are happening in the real devices.</p>
+<h3 id="jailbreak">Jailbreak</h3>
+<h4 id="why-need-to-jailbreak">Why need to jailbreak</h4>
+<p>Jailbreaking is the process of gaining root access to the entire device. The best approach for security testing an application is to examine it on a jailbroken device. Jailbreaking an iOS device allows for:</p>
+<ul>
+<li>Removing the security (and other) limitations on the OS imposed by Apple</li>
+<li>Providing root access to the operating system</li>
+<li>Allowing important testing software tools to be installed</li>
+<li>Providing access to the Objective-C Runtime</li>
+</ul>
+<p>iOS applications store data in the application sandbox which is not accessible to the public (but is available to root and the application itself). Without root access, it is not possible to access the application sandbox, see what data is being stored, and how is it stored. Also, most the system level files are owned by root.</p>
+<p>The process for jailbreaking various iOS versions can be quite different.
+Recommend:</p>
+<ul>
+<li>An A5-A11 iDevice (iPhone 5s to iPhone X)</li>
+<li>Use USB-A cable instead of USB-C because jailbreak have caused issues.</li>
+</ul>
+<p>Warning:</p>
+<ul>
+<li>Jailbreaking your iDevice significantly weakens your security posture. You should not be doing this on your primary device. In fact, you should not use the jailbroken device for anything other than pentesting.</li>
+<li>If the iDevice is rebooted, jailbreak will lose. Hence, you need to jailbreak device again. Check different types of Jailbreak in <a href="https://ios.cfw.guide/types-of-jailbreak/#what-are-the-different-types">here</a></li>
+</ul>
+<h4 id="can-i-jailbreak-">Can I JailBreak ?</h4>
+<p><em>Please check the supported device and compatibility iOS version first. <a href="https://canijailbreak.com/">Visit here.</a></em></p>
+<p>In this article, I will use the most popular jailbreak tool <strong>Checkra1n</strong> for example. Please refer to this <a href="https://checkra.in/">official website</a> for newest details and updates.</p>
+<p>Here it is Checkra1n Tool support Device list.</p>
+<ul>
+<li>iPhone 6s, 6s Plus, SE, 7 and 7 Plus</li>
+<li>iPad 5th, 6th and 7th generations</li>
+<li>iPad Air 2</li>
+<li>iPad mini 4</li>
+<li>iPad Pro 1st and 2nd generations</li>
+<li>iPod touch 7</li>
+</ul>
+<p>A11 Support Device list:</p>
+<ul>
+<li>iPhone 8 and 8 Plus</li>
+<li>iPhone X</li>
+</ul>
+<p>Unsupported devices: Checkra1n tool does not support A13 and A14 Jailbreak, such as iPhone 11 Pro, iPhone 11, iPhone 11 Pro Max, iPhone XR, iPhone XS Max, iPhone XS, iPhone XS Max, iPhone 12 / iPhone 12 Mini / iPhone 12 Pro / iPhone 12 Pro Max.</p>
+<p>Notes: Checkra1n 0.12.3 version</p>
+<h4 id="how-can-we-jailbreak">How can we jailbreak?</h4>
+<p>Example:</p>
+<ul>
+<li>Checkra1n: 0.12.3 version</li>
+<li>MacOS Monterey</li>
+<li>iPhone X, version 14.8.1</li>
+<li>USB-A cable</li>
+</ul>
+<p><strong>Step 1</strong>. Remove Passcode in iPhone. Connect iPhone to Mac with a cable, then Click <em>“Trust”</em> this computer.</p>
+<p><strong>Step 2</strong>. Install Checkra1n tools on your Mac. In version 0.12.3, refer to the notes.</p>
+<p><img src="https://tthseus.github.io/images/post/ios-chap1/cr-note.png" alt="checkra1n-note"></p>
+<p><strong>Step 3</strong>. Open <em>Checkra1n</em> tool, then config with option</p>
+<p><img src="https://tthseus.github.io/images/post/ios-chap1/cr-homescreen.png" alt="checkra1n-homescreen"></p>
+<p><img src="https://tthseus.github.io/images/post/ios-chap1/cr-option.png" alt="checkra1n-option"></p>
+<p><strong>Step 4</strong>. Enter the DFU mode, then follow instruction on screen</p>
+<p><img src="https://tthseus.github.io/images/post/ios-chap1/dfu-mode.png" alt="checkra1n-DFU"></p>
+<p><strong>Step 5</strong>. Once booted, will have the installed Checkra1n application on iPhone. This means we jailbreak successfully. Finally, we can install Cydia inside Checkra1n app.</p>
+<p><img src="https://tthseus.github.io/images/post/ios-chap1/cr-cydia.png" alt="cydia"></p>
+<h3 id="awesome-tweaks-utilities">Awesome Tweaks, Utilities</h3>
+<ul>
+<li>
+<p><strong>Checkra1n</strong>: a semi-tethered jailbreak tool. This means that you need to connect the device to a computer every time you want to jailbreak/rejailbreak. Checkra1n also uses an exploit that is hardware based (Apple can’t patch this). Due to Checkra1n being hardware based, it will only work on certain devices, A7 to A11. This means it does not work on the XS or newer.</p>
+</li>
+<li>
+<p><strong><a href="https://unc0ver.dev/">Unc0ver</a></strong>: the alternative of Checkra1n. Unc0ver is a semi-untethered jailbreak. This means that it does not require a computer to rejailbreak and instead, you can install the Unc0ver app via a signing service. The exploit used in Unc0ver is a tfp0 exploit, which is software based. This means with each iOS update, the chances of the jailbreak not working is 99%. Unc0ver, due to being software based, can run on any device that is able to run the supported iOS version. unc0ver supports iOS 11.0 through to iOS 14.3.</p>
+</li>
+<li>
+<p><strong>Cydia</strong>: a GUI wrapper for apt and, once apt is installed, the rest can be installed via command line. Alternative to Apple&rsquo;s App Store for &ldquo;jailbroken&rdquo; devices.</p>
+<p><img src="https://tthseus.github.io/images/post/ios-chap1/cydia.jpg" alt="cydia"></p>
+</li>
+<li>
+<p><strong>OpenSSH</strong>: A utility to help users to connect remotely to the iOS file system. Install via search function in Cydia. Default root&rsquo;s password is &ldquo;alpine&rdquo;.</p>
+</li>
+<li>
+<p><strong>AppSynce Unified</strong>: allows to freely install ad-hoc signed, fakesigned, or unsigned IPA app packages on their iOS devices that iOS would otherwise consider invalid. Useful when sideloading IPA package. Install via Cydia by addding Karen&rsquo;s repo (<a href="https://cydia.akemi.ai">https://cydia.akemi.ai</a>).</p>
+</li>
+<li>
+<p><strong><a href="https://frida.re/docs/ios/">Frida</a></strong>: a dynamic code instrumentation toolkit. It lets you inject snippets of JavaScript or custom libraries into native apps on Windows, macOS, GNU/Linux, iOS, Android, or QNX. Install Frida package by adding Frida repo (<a href="https://build.frida.re">https://build.frida.re</a>) into Cydia source.</p>
+</li>
+<li>
+<p><strong>Filza File Manager</strong>: A powerful file manager on iPhone. Install via Cydia.</p>
+</li>
+</ul>
+<h3 id="on-laptop-macos">On Laptop (MacOS)</h3>
+<ul>
+<li><strong>Xcode</strong>:  Apple’s IDE and includes the latest iOS SDK and iOS Simulator that contains a suite of tools for developing software for macOS, iOS, watchOS, and tvOS. It’s available for free on the Mac App Store (requires an Apple ID). Xcode will offer you different tools and functions to interact with an iOS device that can be helpful during a pentest, such as analyzing logs, or sideloading of apps.</li>
+<li><strong>Finder</strong>: Starting with macOS Catalina, the Finder replaces iTunes for browsing and accessing content on your computer.</li>
+<li><strong>SSH client tool</strong>: use command line tool like Terminal or Putty or Terminus … to set up a SSH tunnel to access iOS file system.</li>
+<li><strong>FileZilla</strong> : a client SFTP tool where you can transfer file between your Mac and iPhone.  The alternative tool is <a href="https://cyberduck.io/">Cyberduck</a>.</li>
+<li><strong>Frida &amp; <a href="https://github.com/sensepost/objection">Objection</a></strong>: Install via pip3.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Bash" data-lang="Bash">pip3 install frida-tools objection
+</code></pre></div></li>
+<li><strong>Grapefruit</strong>: Runtime Application Instruments for iOS. Previously Passionfruit. Check out in Github repo <a href="https://github.com/ChiChou/grapefruit">here.</a> Require Node.js installed
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>npm install -g igf
+</code></pre></div></li>
+</ul>
+<p><img src="https://tthseus.github.io/images/post/ios-chap1/grapefruit.jpg" alt="grapefruit"></p>
+<ul>
+<li><strong>MobSF</strong>: Mobile Security Framework (MobSF) is an automated, all-in-one mobile application (Android/iOS/Windows) pen-testing, malware analysis and security assessment framework capable of performing static and dynamic analysis. Read its document <a href="https://mobsf.github.io/docs/#/">here.</a> Make sure the requirements are installed.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">git clone https://github.com/MobSF/Mobile-Security-Framework-MobSF.git
+cd Mobile-Security-Framework-MobSF
+./setup.sh
+</code></pre></div></li>
+</ul>
+<hr>
+<h3 id="references">References:</h3>
+<ol>
+<li>Can I Jailbreak - <a href="https://canijailbreak.com/">https://canijailbreak.com/</a></li>
+<li>The iPhone Wiki - <a href="https://www.theiphonewiki.com/">https://www.theiphonewiki.com/</a></li>
+<li>Jailbreak Reddit Community - <a href="https://www.reddit.com/r/jailbreak/">https://www.reddit.com/r/jailbreak/</a></li>
+<li>OWASP Mobile Security Testing Guide - <a href="https://mobile-security.gitbook.io/mobile-security-testing-guide/ios-testing-guide/0x06b-basic-security-testing#ios-testing-setup">https://mobile-security.gitbook.io/mobile-security-testing-guide/ios-testing-guide/0x06b-basic-security-testing#ios-testing-setup</a></li>
+</ol>
+
+        </div>
+      </div>
+      <section class="section">
+        <div class="columns is-centered">
+          <div class="column max-800px">
+            <div class="columns is-mobile">
+              <div class="column has-text-left">
+                
+                <p>Previous post</p>
+                <a href="https://tthseus.github.io/post/lorem-ipsum8/">Lorem Ipsum 8</a>
+                
+              </div>
+              <div class="column has-text-right">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  </article>
+<div id="disqus_thread"></div>
+  <script>
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://tthseus.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+        </main>
+<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script defer src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script>
+
+
+
+<script defer src="https://tthseus.github.io/main.min.5e04ae23ddf043a407012b7256b47523527d0292509f00d61fd895119fdfd054.js" ></script>
+<script defer src="https://tthseus.github.io/toggle.min.ec83b97396c1176938f606095f21ca5bc874cd3fb2f6eedd52661dac61dfdfb1.js" ></script><footer class="footer">
+    <div class="container">
+        <div class="columns has-text-centered">
+            <ul class="is-flex is-vcentered justify-content is-align-self-auto mx-auto">
+                <li>
+                    <a href="mailto:tthseus@gmail.com" aria-label="email" class="icon is-medium">
+                        <i data-feather="mail" class="fas fa-envelope"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/tthseus" target="_blank" rel="noopener" aria-label="GitHub" class="icon is-medium">
+                        <i data-feather="github" class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/tan-tinh-bui-953499180/" target="_blank" rel="noopener" aria-label="LinkedIn" class="icon is-medium">
+                        <i data-feather="linkedin" class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://tthseus.github.io/index.xml" aria-label="RSS" class="icon is-medium">
+                        <i data-feather="rss" class="fas fa-rss"></i>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <p class="has-text-centered justify-content mx-auto font-sans">
+            <a href="https://tthseus.github.io">My Stuff</a>
+            &copy; Powered by the
+            <a href="https://github.com/tthseus/memoir-theme" target="_blank" rel="noopener">
+                Memoir Theme</a>
+            </p>
+    </div>
+    <div class="back-to-top icon is-medium">
+        <i class="fas fa-arrow-circle-up fa-2x"></i>
+    </div>
+</footer></body>
+</html>

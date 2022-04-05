@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mobile security on My Stuff</title>
+    <link>https://tthseus.github.io/tags/mobile-security/</link>
+    <description>Recent content in mobile security on My Stuff</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tthseus.github.io/tags/mobile-security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iOS 101: Setting Up iOS Application Security Testing Environment - Part 01</title>
+      <link>https://tthseus.github.io/post/ios-chap1/</link>
+      <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tthseus.github.io/post/ios-chap1/</guid>
+      <description>Photo by Szabo Viktor on Unsplash
+Motivation When researching and doing penetration testing of the mobile application, I came across both major platforms Android and iOS. While it&amp;rsquo;s kinda easy to get started with Android, but it&amp;rsquo;s not the same to do so on iOS due to some limitations from hardware and Apple&amp;rsquo;s security features.</description>
+    </item>
+    
+  </channel>
+</rss>

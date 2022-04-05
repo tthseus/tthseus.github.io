@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tthseus.github.io/tags/ios/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tthseus.github.io/post/ios-chap1/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tthseus.github.io/tags/mobile-security/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tthseus.github.io/post/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tthseus.github.io/tags/</loc>
+    <lastmod>2022-04-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://tthseus.github.io/tags/go/</loc>
     <lastmod>2021-07-20T16:16:25+07:00</lastmod>
   </url><url>
@@ -11,13 +26,7 @@
     <loc>https://tthseus.github.io/post/lorem-ipsum8/</loc>
     <lastmod>2021-07-20T16:16:25+07:00</lastmod>
   </url><url>
-    <loc>https://tthseus.github.io/post/</loc>
-    <lastmod>2021-07-20T16:16:25+07:00</lastmod>
-  </url><url>
     <loc>https://tthseus.github.io/tags/security/</loc>
-    <lastmod>2021-07-20T16:16:25+07:00</lastmod>
-  </url><url>
-    <loc>https://tthseus.github.io/tags/</loc>
     <lastmod>2021-07-20T16:16:25+07:00</lastmod>
   </url><url>
     <loc>https://tthseus.github.io/post/lorem-ipsum7/</loc>
@@ -40,9 +49,6 @@
   </url><url>
     <loc>https://tthseus.github.io/about/</loc>
     <lastmod>2021-07-20T13:17:32+07:00</lastmod>
-  </url><url>
-    <loc>https://tthseus.github.io/post/lorem-ipsum1/</loc>
-    <lastmod>2019-03-20T18:42:38+02:00</lastmod>
   </url><url>
     <loc>https://tthseus.github.io/</loc>
     <lastmod>2019-03-13T17:28:09+02:00</lastmod>

@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 13 Mar 2019 17:28:09 +0200</lastBuildDate><atom:link href="https://tthseus.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>iOS 101: Setting Up iOS Application Security Testing Environment - Part 01</title>
+      <link>https://tthseus.github.io/post/ios-chap1/</link>
+      <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tthseus.github.io/post/ios-chap1/</guid>
+      <description>Photo by Szabo Viktor on Unsplash
+Motivation When researching and doing penetration testing of the mobile application, I came across both major platforms Android and iOS. While it&amp;rsquo;s kinda easy to get started with Android, but it&amp;rsquo;s not the same to do so on iOS due to some limitations from hardware and Apple&amp;rsquo;s security features.</description>
+    </item>
+    
+    <item>
       <title>Lorem Ipsum 8</title>
       <link>https://tthseus.github.io/post/lorem-ipsum8/</link>
       <pubDate>Tue, 20 Jul 2021 16:16:25 +0700</pubDate>
@@ -78,15 +88,6 @@ Placuere aderit temperiemque se Dianae Saturno edo parte quod habenti. Enim pall
       
       <guid>https://tthseus.github.io/about/</guid>
       <description>1 2 3 4 5  {  &amp;#34;name&amp;#34;: &amp;#34;Theseus&amp;#34;,  &amp;#34;interests&amp;#34;: [&amp;#34;Application Security&amp;#34;],  &amp;#34;Contact&amp;#34;: &amp;#34;tthseus@gmail.com&amp;#34; }   </description>
-    </item>
-    
-    <item>
-      <title>This Post is Full of Lorem Ipsum</title>
-      <link>https://tthseus.github.io/post/lorem-ipsum1/</link>
-      <pubDate>Wed, 20 Mar 2019 18:42:38 +0200</pubDate>
-      
-      <guid>https://tthseus.github.io/post/lorem-ipsum1/</guid>
-      <description>Omnibus pantherarum felix iam tum Phoebe Bisque Phaethontis igitur Lorem markdownum cessit maerens novitasque sidera: fuit Phocis tinnitibus solis. Passi sedilia, perfringit dilataque Victor extimuit et regione adsere, illa eiusdem vastum limitibus! Senectae posito solet mugit ore ludit, vos iura, et sudore templum isto mea: siqua!</description>
     </item>
     
     <item>

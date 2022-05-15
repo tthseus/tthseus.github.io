@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>security on My Stuff</title>
+    <title>security on Stuff</title>
     <link>https://tthseus.github.io/tags/security/</link>
-    <description>Recent content in security on My Stuff</description>
+    <description>Recent content in security on Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 20 Jul 2021 16:16:25 +0700</lastBuildDate><atom:link href="https://tthseus.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />

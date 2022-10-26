@@ -8,12 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 15 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tthseus.github.io/tags/awesome-list/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>iOS 101: Awesome iOS Security Testing Tools - Part 02</title>
+      <title>iOS 101: Awesome iOS Security Testing Tools</title>
       <link>https://tthseus.github.io/post/ios-chap02/</link>
       <pubDate>Sun, 15 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://tthseus.github.io/post/ios-chap02/</guid>
-      <description>A curated list of resources for security testing of iOS apps. (Keep updating)   Checkra1n: a semi-tethered jailbreak tool. This means that you need to connect the device to a computer every time you want to jailbreak/rejailbreak. Checkra1n also uses an exploit that is hardware based (Apple can’t patch this).</description>
+      <description>A curated list of resources for security testing of iOS apps. (Keep updating) Checkra1n: a semi-tethered jailbreak tool. This means that you need to connect the device to a computer every time you want to jailbreak/rejailbreak. Checkra1n also uses an exploit that is hardware based (Apple can’t patch this).</description>
     </item>
     
   </channel>

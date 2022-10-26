@@ -8,16 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 13 Mar 2019 17:28:09 +0200</lastBuildDate><atom:link href="https://tthseus.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>iOS 101: Awesome iOS Security Testing Tools - Part 02</title>
+      <title>iOS 101: Awesome iOS Security Testing Tools</title>
       <link>https://tthseus.github.io/post/ios-chap02/</link>
       <pubDate>Sun, 15 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://tthseus.github.io/post/ios-chap02/</guid>
-      <description>A curated list of resources for security testing of iOS apps. (Keep updating)   Checkra1n: a semi-tethered jailbreak tool. This means that you need to connect the device to a computer every time you want to jailbreak/rejailbreak. Checkra1n also uses an exploit that is hardware based (Apple can’t patch this).</description>
+      <description>A curated list of resources for security testing of iOS apps. (Keep updating) Checkra1n: a semi-tethered jailbreak tool. This means that you need to connect the device to a computer every time you want to jailbreak/rejailbreak. Checkra1n also uses an exploit that is hardware based (Apple can’t patch this).</description>
     </item>
     
     <item>
-      <title>iOS 101: Setting Up iOS Application Security Testing Environment - Part 01</title>
+      <title>iOS 101: Setting Up iOS Application Security Testing Environment</title>
       <link>https://tthseus.github.io/post/ios-chap01/</link>
       <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
       
@@ -86,7 +86,8 @@ Motivation When researching and doing penetration testing of the mobile applicat
       <pubDate>Tue, 20 Jul 2021 13:17:32 +0700</pubDate>
       
       <guid>https://tthseus.github.io/about/</guid>
-      <description>1 2 3 4 5  {  &amp;#34;name&amp;#34;: &amp;#34;Theseus&amp;#34;,  &amp;#34;interests&amp;#34;: [&amp;#34;Application Security&amp;#34;],  &amp;#34;Contact&amp;#34;: &amp;#34;tthseus@gmail.com&amp;#34; }   </description>
+      <description>💫 About Me: Hi, I&amp;rsquo;m Tristan,🌱 I’m currently learning and working on Application Security.
+🌐 Socials: 💻 Tech Stack: 📊 GitHub Stats: 🏆 GitHub Trophies ✍️ Random Dev Quote </description>
     </item>
     
     <item>

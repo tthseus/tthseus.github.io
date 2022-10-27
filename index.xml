@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 13 Mar 2019 17:28:09 +0200</lastBuildDate><atom:link href="https://tthseus.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Resume</title>
+      <link>https://tthseus.github.io/resume/</link>
+      <pubDate>Thu, 20 Oct 2022 17:28:09 +0200</pubDate>
+      
+      <guid>https://tthseus.github.io/resume/</guid>
+      <description>Tristan BUI Get in touch Professional experience Jun 2021 - Jun 2022 | Application Security Specialist
+HCL Vietnam Company Ltd.
+Conducted application security assessments (web, mobile, web service, Infra, etc.). involving manual testing, analysis, and automated scanning tool such as HCL AppScan, Rapid7 AppSpider.</description>
+    </item>
+    
+    <item>
       <title>iOS 101: Awesome iOS Security Testing Tools</title>
       <link>https://tthseus.github.io/post/ios-chap02/</link>
       <pubDate>Sun, 15 May 2022 00:00:00 +0000</pubDate>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SAST on Stuff</title>
+    <link>https://tthseus.github.io/tags/sast/</link>
+    <description>Recent content in SAST on Stuff</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tthseus.github.io/tags/sast/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iOS 101: Static Analysis</title>
+      <link>https://tthseus.github.io/post/ios-chap03/</link>
+      <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tthseus.github.io/post/ios-chap03/</guid>
+      <description>Getting started In this article, we continue with SAST that is the next phase after getting the IPA package. Static Application Analysis Testing (SAST) is a testing methodology to analyze the source code without executing and it detects the security issues based on code patterns.</description>
+    </item>
+    
+  </channel>
+</rss>
